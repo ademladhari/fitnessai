@@ -40,7 +40,7 @@ const OpenAICompletion = ({exercise,userData}) => {
      setText( data.choices[0].text)
     };
     runCompletion()
-  }, [userData]);
+  }, [exercise, userData]);
 
   
   return (

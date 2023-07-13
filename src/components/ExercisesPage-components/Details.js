@@ -3,8 +3,6 @@ import  BodyPartImage from '../../assets/icons/body-part.png'
 import  TargetImage from '../../assets/icons/target.png'
 import  EquipmentImage from '../../assets/icons/equipment.png'
 import { Button, Stack, Typography } from '@mui/material';
-import ExerciseDescription from './ExerciseDescription';
-import { Auth } from 'firebase/auth';
 import { UserAuth } from '../../context/AuthContext';
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../../firebase';
@@ -29,6 +27,7 @@ function Details({exerciseDetail}) {
   }
   useEffect(() => {
     accessVariables();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   
 const {bodyPart,gifUrl,name,target,equipment}= exerciseDetail;
@@ -52,8 +51,7 @@ const extraDetail =[
           {name}
         </Typography>
         <Typography variant="h6"  paddingTop="15px" paddingBottom="20px">
-        {console.log(name)}
-        {console.log(userData)}
+      
         <OpenAICompletion exercise={name} userData={userData}/>
         
         </Typography >
@@ -68,7 +66,7 @@ const extraDetail =[
               },
              }}
              >
-              <img className='flex bg-[#dedcdc] p-2 rounded-lg' src={item.icon}></img>
+              <img className='flex bg-[#dedcdc] p-2 rounded-lg' alt='img' src={item.icon}></img>
             </Button>
             <Typography variant='h6' className=' font-bold capitalize' >
               {item.name}

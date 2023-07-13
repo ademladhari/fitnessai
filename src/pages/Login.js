@@ -1,12 +1,13 @@
-import React, { useState, useContext } from 'react';
-import GoogleButton from 'react-google-button';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useState, } from 'react';
+
 import { UserAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import home from '../assets/images/sign.avif';
+
 
 function Signin({ show, setShow, showLogin, setShowLogin }) {
-  const { googleSignIn, login, user } = UserAuth();
+  const {  login } = UserAuth();
   const navigate = useNavigate();
 
   const [email, setEmail] = useState('');
@@ -104,6 +105,7 @@ function Signin({ show, setShow, showLogin, setShowLogin }) {
                       Remember me
                     </label>
                   </div>
+              
                   <a
                     href="#"
                     className="text-sm text-blue-700 hover:underline dark:text-blue-500"

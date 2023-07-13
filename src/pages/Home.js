@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import homeimg from "../assets/images/home.png";
 import About from "../components/HomePage-components/About";
 import Search from "../components/HomePage-components/Search";
 import BodyPartContext from '../util/context';
 import Exercices from "../components/HomePage-components/Exercices";
 import Footer from "../components/HomePage-components/Footer";
-import Chatgpt from "../util/chatgpt";
-import Navbar from "../components/HomePage-components/Navbar";
+
 
 
 function Home() {

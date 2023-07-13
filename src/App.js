@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import  Home from './pages/Home';
 import ExerciseDetail from './pages/ExerciseDetail'
 import Navbar from './components/HomePage-components/Navbar';
-import Account from './pages/Account';
+
 import { AuthContextProvider } from './context/AuthContext';
 import { useState } from 'react';
 import SignUp from "./pages/SignUp";
@@ -36,7 +36,7 @@ function App() {
 <Routes>
 <Route path="/" element={<Home show={show} setShow={setShow} />} />
 <Route path="/exercise/:id" element={<ExerciseDetail />} />
-<Route path='/Account' element={<Account />}/>
+
 
 </Routes>
 <Navbar show={show} setShow={setShow} />
