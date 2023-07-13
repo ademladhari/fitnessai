@@ -1,5 +1,5 @@
 import { useContext, createContext, useEffect, useState } from "react";
-import { GoogleAuthProvider, signInWithPopup, signInWithRedirect, signOut, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, setPersistence, browserLocalPersistence } from "firebase/auth";
+import { GoogleAuthProvider, signInWithPopup,  signOut, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, setPersistence, browserLocalPersistence } from "firebase/auth";
 import { auth, db } from '../firebase';
 import { setDoc, doc, getDoc, updateDoc } from 'firebase/firestore';
 
