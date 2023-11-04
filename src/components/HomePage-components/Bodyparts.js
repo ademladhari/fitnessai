@@ -16,17 +16,23 @@ function Bodyparts({ data,isBodyParts}) {
   };
 
   const handleLeftArrowClick = () => {
-    handleScroll(100); 
+    if(isBodyParts){
+    handleScroll(530);
+    }else
+    {handleScroll(210)} 
   };
 
   const handleRightArrowClick = () => {
-    handleScroll(-100); 
+    if(isBodyParts){
+    handleScroll(-530);
+    }else
+    {handleScroll(-210)} 
   };
   const handleRight = () => {
     if (isBodyParts) {
-      return 'right-2';
+      return '-right-14';
     } else {
-      return '-right-16';
+      return '-right-14';
     }
   };
   const handletop = () => {
@@ -36,22 +42,30 @@ function Bodyparts({ data,isBodyParts}) {
       return ' top-52';
     }
   };
+  const handlewidth=()=>{
+    if (isBodyParts){
+    return 'w-[80%] ml-[5%]'
+    }
+    else{
+      return 'w-[83%]'
+    }
+  }
 
   return (
-    <div className='relative mt-20 ' >
+    <div className={`relative mt-20 xl:ml-0   xl:w-[94%] ${handlewidth()} `} >
       
         <button onClick={handleLeftArrowClick}>
-          <VscArrowCircleLeft size={50} color='#333333' handleRight className={`z-10 absolute top-  left-3 transition duration-300 ease-in-out hover:scale-125 overflow-y-hidden w-14 translate-x-3 ${handletop()}`}   />
+          <VscArrowCircleLeft size={50} color='#333333'  className={`z-10 absolute     transition duration-300 ease-in-out hover:scale-125 overflow-y-hidden w-10 ${handletop()}`}   />
         </button>
         <button onClick={handleRightArrowClick}>
-          <VscArrowCircleRight size={50} color='#333333' className={`z-10 absolute transition duration-300 ease-in-out hover:scale-125 overflow-y-hidden w-14 ${handleRight()} ${handletop()}`   }/>
+          <VscArrowCircleRight size={50} color='#333333' className={`z-10 absolute transition duration-300 ease-in-out hover:scale-125 overflow-y-hidden w-10 ${handleRight()} ${handletop()}`   }/>
         </button>
       
       <div
-        className='scroll-container   '       
+        className='scroll-container ml-10 sm:ml-12     '       
         style={{       
-          marginLeft:'10vh', 
-         width:"185vh",  
+          
+       
         
           overscrollBehaviorY: 'none',
         }}
@@ -61,7 +75,7 @@ function Bodyparts({ data,isBodyParts}) {
         }}
         ref={containerRef}
       >
-        <div   className='     '>
+        <div   className=' '>
         {data.map((item, index) => (
           <Box  className='inline-block' key={item.id || item} itemId={item.id || item} title={item.id || item} m='0 20px'>
            {isBodyParts ? <Bodypartsicons index={index} item={item}></Bodypartsicons>

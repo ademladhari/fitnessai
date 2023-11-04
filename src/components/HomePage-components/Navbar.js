@@ -15,54 +15,56 @@ function Navbar({ setShow, show }) {
   };
 
   return (
-    <div className="flex flex-col sm:flex-row justify-around bg-gray-300 w-full fixed -top-0  z-10">
-      <div className="flex flex-row justify-center items-center py-3">
+    <div className="flex flex-row justify-between bg-gradient-to-r   from-gray-300 to-gray-400  fixed  -top-0 h-[55px] xl:h-[55px] md:h-[40px] w-[100%]  z-10 dark:from-[#171717] dark:to-[#515050]">
+      <div className="flex flex-row  items-center py-3">
         <Link
           to="/"
-          className="text-lg font-semibold text-gray-800 mx-4 border-b-4 border-red-500"
+          className="xl:text-lg font-semibold dark:text-gray-300 text-gray-800 mx-4 border-b-4 text-base border-red-500"
         >
           Home
         </Link>
-        <a href="exercises" className="text-lg font-semibold text-gray-800 mx-4">
+        <a href="exercises" className="xl:text-lg text-base dark:text-gray-300 font-semibold text-gray-800 xl:mx-4 mx-2">
           Exercises
         </a>
-        <a href="about" className="text-lg font-semibold text-gray-800 mx-4">
+        <a href="about" className="xl:text-lg text-base dark:text-gray-300 font-semibold text-gray-800 xl:mx-4 mx-2">
           About
         </a>
-        <a href="contact" className="text-lg font-semibold text-gray-800 mx-4">
+        <a href="contact" className="xl:text-lg dark:text-gray-300 text-base font-semibold text-gray-800 xl:mx-4 mx-2">
           Contact
         </a>
-      </div>
-      <div className="flex items-center ml-auto mt-1 mr-4">
-      {user.email ? (
+        </div>
+        <div className="">
+        {user.email ? (
   <button
-    className="ml-auto px-4 py-2 bg-red-500 text-white rounded-md"
+    className="ml-auto px-4 py-2 bg-red-500 text-white dark:text-gray-300 rounded-md"
     onClick={handleSignOut}
   >
     Log Out
   </button>
 ) : (
   <>
-    <button
-      className="px-4 flex align-middle py-2 text-lg font-medium bg-blue-500 text-white rounded-md"
+  <button
+      className="flex align-middle xl:mt-1 xl:mb-1 xl:py-2 xl:text-lg lg:text-base md:mt-[8%] md:p-2 sm:p-2 sm:mt-3 mt-[25%]    mr-1 lg:mt-[10%] py-0.5 px-2 xl:px-4 text-xs font-medium bg-blue-500 text-white rounded-md"
       onClick={() => setShow(!show)}
     >
       {!show ? (
         <>
-          <FaArrowDown color="white" className="mr-3 pt-0.5 mt-1  text-gray-800" />
+          <FaArrowDown color="white" className="xl:mr-3 mr-1 xl:pt-0.5 xl:pb-0 pb-0.5 mt-1 dark:text-gray-300   text-gray-800" />
           Login
         </>
       ) : (
         <>
-          <FaArrowUp color="white" className="mr-3 pt-0.5 mt-1 text-gray-800" />
+          <FaArrowUp color="white" className="xl:mr-3 mr-1 xl:pt-0.5 pb-0.5 xl:pb-0 mt-1 dark:text-gray-300 text-gray-800" />
           Login
         </>
       )}
     </button>
+  
   </>
 )}
-
-      </div>
+</div>
+  
+     
     </div>
   );
 }

@@ -1,11 +1,12 @@
 import React from 'react';
 import rope from '../../assets/images/rope.jpg'
 const AboutSection = () => {
+
   return (
 
   
   
-<div class="container my-11 mx-auto md:px-6   ">
+<div class="container xl:my-11 mx-auto md:px-6   ">
 
   <section class="mb-10   bg-[#00000000]">
    
@@ -13,8 +14,8 @@ const AboutSection = () => {
       <div class=" grid items-center lg:grid-cols-2  ">
         <div class="mb-12 lg:mb-0 ">
           <div
-            class="h-[450px] relative z-[1] block rounded-2xl bg-[#ffffff38] px-6 pt-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] backdrop-blur-[30px] dark:bg-[hsla(0,0%,5%,0.55)] dark:shadow-black/20 md:px-12 lg:-mr-14">
-            <h2 class="mb-8 text-3xl font-bold">Enjoy the workout !</h2>
+            class="xl:h-[450px] h-[650px] relative z-[1] block rounded-2xl bg-[#ffffff38] px-6 xl:pt-12 pt-3 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] backdrop-blur-[30px] dark:bg-[hsla(0,0%,5%,0.55)] dark:shadow-black/20 md:px-12 lg:-mr-14">
+            <h2 class="mb-8 xl:text-3xl text-2xl font-bold">Enjoy the workout !</h2>
             <p class="mb-8 pb-2  text-neutral-900  dark:text-neutral-300 lg:pb-0">
               We provide the best fitness exercises for your gym experience
             </p>
@@ -54,7 +55,7 @@ keep fit by finding your favorite exercises and workout plans right here:
         </div>
         <div>
           <img src={rope}
-            class="w-full h-[32rem] object-cover  rounded-2xl shadow-lg dark:shadow-black/20"  alt='rope' />
+            class="xl:w-full xl:h-[32rem] h-0 w-0 object-cover  rounded-2xl shadow-lg dark:shadow-black/20"  alt='rope' />
         </div>
       </div>
     </div>

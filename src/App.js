@@ -14,10 +14,11 @@ import Login from "./pages/Login";
 function App() {
   const [showLogin, setShowLogin] = useState(true);
   const [show, setShow] = useState(false);
+ 
   return (
     <>    
     
-    <Box width="400px"sx={{width:{xl:'100%'}}}  >
+    <Box width="400px" height="100%" sx={{width:{xl:'100%'}}}  >
    
 <AuthContextProvider>
 <SignUp

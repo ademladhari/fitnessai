@@ -47,8 +47,8 @@ function Signin({ show, setShow,showLogin,setShowLogin }) {
     <>
     
  {!showLogin&&(show && (
-        <div class="flex-1 ml-[79%] h-[10%] mt-[2.0%]  w-80 fixed z-20   ">
-          <div class="px-6 pt-6 py-10 lg:px-8 rounded-3xl bg-gradient-to-b from-50% from-[#e2e4e7] to-[#D1D5DB]  backdrop-blur-xl drop-shadow-lg">
+        <div class="flex-1 xl:ml-[78.6%] ml-[10%] h-[10%] mt-[2.0%]  w-80 fixed z-20   ">
+          <div class="px-6 pt-6 py-10 lg:px-8 rounded-3xl bg-gradient-to-b from-50% from-[#e2e4e7] to-[#D1D5DB]  backdrop-blur-xl drop-shadow-lg dark:from-[#171717] dark:to-[#515050] ">
             <h3 class="mx-11 pb-6 text-xl font-medium text-center text-gray-900 dark:text-white">Sign in to our platform</h3>
             <form class="space-y-5" onSubmit={handleSubmit}>
               <div>

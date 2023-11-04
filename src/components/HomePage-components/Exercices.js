@@ -44,7 +44,7 @@ function Exercices() {
       display='flex'
         direction="row"
         gap={{ lg: 2, xs: 1 }}
-        width="180vh"
+        width="90%"
         flexWrap="wrap"
         justifyContent="center"
       

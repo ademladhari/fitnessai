@@ -17,19 +17,16 @@ import BodyPartContext from '../../util/context';
 function BodyPartsIcons({ item,index }) {
   const bodyparts = [All, back,cardio,chest,lowerArms,lowerLegs,neck,shoulders,upperArms,upperLegs,waist];
   const {  setBodyPart } = useContext(BodyPartContext);
-
 return (
   <>
-          <button className='' key={index} onClick={()=>setBodyPart(item)}>
-            <div className='flex flex-col text-center text-2xl transition duration-300 ease-in-out hover:scale-105 overflow-y-hidden '>
-              <img className='h-44 w-44 inline-block rounded-3xl overflow-hidden mb-9 ' src={bodyparts[index]} />
+          <button className=' ' key={index} onClick={()=>setBodyPart(item)}>
+            <div className='flex   flex-col text-center text-2xl transition duration-300 ease-in-out hover:scale-105 overflow-y-hidden '>
+              <img className='h-44  w-44 inline-block rounded-3xl overflow-hidden mb-9  ' src={bodyparts[index]} />
               {item}
             </div>
             
           </button>
-   
-    
-    
+
   </>
 );
   }

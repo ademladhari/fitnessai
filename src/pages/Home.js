@@ -13,29 +13,19 @@ function Home() {
   const [exercises, setExercises] = useState([]);
 
 
+
   return (
     <>
-      <div
-        className="wrapper z-10"
-        style={{
-          backgroundImage: `url(${homeimg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          zIndex: -999,
-        }}
-      >
-    
+   <div class="relative z-10   h-screen   overflow-x-hidden ">
+  <div class=" inset-0  bg-no-repeat bg-top bg-cover  xl:h-[100vh] sm:pt-0 scale-y-110  pt-36 bg-black md:h-[70vh] sm:h-[70vh]  h-[25vh]   w-full md:w-full      " style={{
+          backgroundImage:` url(${homeimg})`,
 
-        <header>
-          <img
-            className="background grayscale"
-            src={homeimg}
-            alt=""
-            style={{
-              display: "none",
-            }}
-          />
-        </header>
+          zIndex: -999,
+        }}></div>
+       
+    
+  
+  
         <section className="bg-[#525252] bg-gradient-to-b from-50% from-[#060606] to-[#5a5959] ">
           <About />
         </section>

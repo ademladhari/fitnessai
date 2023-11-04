@@ -5,6 +5,7 @@ export const exerciseOptions ={
     'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
   }
 };
+
 export const youtubeOptions = {
   method: 'GET',
   headers: {

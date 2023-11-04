@@ -4,11 +4,11 @@ import React from 'react'
 function ExercisesVideos({exerciseVideo,name}) {
 
   return (
-    <Box sx={{ marginTop: { lg: '100px', xs: '20px' } }} p="20px">
+    <Box sx={{ marginTop: { lg: '100px', xs: '20px' } }} p="15px" width="90%" >
     <Typography textAlign="center"  sx={{ fontSize: { lg: '44px', xs: '25px' } }} fontWeight={700} color="#000" mb="43px">
       Watch <span style={{ color: '#FF2625', textTransform: 'capitalize' }}>{name}</span> exercise videos
     </Typography>
-    <Stack  sx={{marginX:'15%', flexDirection: { lg: 'row' }, gap: { lg: '100px', xs: '0px' } }} justifyContent="center" flexWrap="wrap" alignItems="center">
+    <Stack  sx={{marginX:{lg:'0%' , xs:'0%'}, flexDirection: { lg: 'row' }, gap: { lg: '100px', xs: '0px' } }} justifyContent="center" flexWrap="wrap" alignItems="center">
       {exerciseVideo?.slice(1, 4)?.map((item, index) => (
         <a
           key={index}

@@ -48,8 +48,8 @@ function Signin({ show, setShow, showLogin, setShowLogin }) {
     <>
       {showLogin && show && (
       
-          <div className="flex-1 ml-[78.6%] h-[10%] mt-[2.2%]  w-80   fixed z-20">
-            <div className="px-6 pt-6 py-11 lg:px-8 rounded-3xl   bg-gradient-to-b from-50% from-[#e2e4e7] to-[#D1D5DB]  drop-shadow-lg">
+          <div className="flex-1 xl:ml-[78.6%] ml-[10%] h-[10%] mt-[2.2%]  w-80   fixed z-20">
+            <div className="px-6 pt-6 py-11 lg:px-8 rounded-3xl   bg-gradient-to-b from-50% from-[#e2e4e7] to-[#D1D5DB]  drop-shadow-lg dark:from-[#171717] dark:to-[#515050]">
               <h3 className="mx-11 pb-6 text-xl font-medium text-center text-gray-900 dark:text-white">
                 Login  to our platform
               </h3>

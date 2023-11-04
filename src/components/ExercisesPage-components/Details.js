@@ -8,7 +8,7 @@ import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../../firebase';
 import { useState } from 'react';
 import OpenAICompletion from '../../util/chatgpt';
-
+ 
 function Details({exerciseDetail}) {
   const [userData,setUserData]=useState({})
   const {user}=UserAuth()
@@ -43,8 +43,8 @@ const extraDetail =[
 
   return (
 
-    <Stack gap="60px" sx={{flexDirection:{lg:'row'},p:'20px',alignItems:'center', paddingTop:'120px', paddingRight:"30%", marginLeft:'3%'}}>
-      <img src={gifUrl} alt={name} loading='lazy' className=' w-[600px] h-[600px] rounded-2xl'></img>
+    <Stack gap="60px" sx={{flexDirection:{lg:'row'},p:'20px',alignItems:'center', paddingTop:'120px', paddingRight:"30%", marginLeft:'3%',width:"100%" }} >
+      <img src={gifUrl} alt={name} loading='lazy' className=' ml-[20%] sm:w-[600px]  h-[300px] sm:h-[600px] rounded-2xl'></img>
       
       <Stack sx={{gap :{lg:'5px',xs:'20px'}} } className=" ml-3">
         <Typography variant='h4'>

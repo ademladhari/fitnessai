@@ -38,7 +38,7 @@ function Exercicespage() {
 
     
   return (
-    <Box className='bg-[#F3F4F6]' >
+    <Box className='bg-[#F3F4F6] h-screen ' >
         
         <Details exerciseDetail={exerciseDetail}/>
         <ExercisesVideos exerciseVideo={exerciseVideo}name={exerciseDetail.name}/>

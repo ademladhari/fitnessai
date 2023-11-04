@@ -33,34 +33,35 @@ body {
   .scroll-container::-webkit-scrollbar {
     display: none;
   }
+  
+  .text-scroll{
+    overflow-y:scroll ;
+    white-space: wrap;
+    scrollbar-width: none;
+   
+    -ms-overflow-style: none;
+   }
+   .text-scroll::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar for Chrome, Safari, and newer versions of Edge */
+  }
 
-   .wrapper {
-   
-    
-     height: 100vh;
-     
-     overflow-x: hidden;
-     perspective: 10.1px;
-     width: 100%;
-   
-   }
-   .pagination .pagination-previous,
-   .pagination .pagination-next {
-    
-     background-color: #F3F4F6;
-    
-     color: #333333;
-     width: auto;
-     height: auto;
-     line-height: 1.2;
-     padding: 3px 6px;
-   }
-   .pagination {
+  .pagination .pagination-previous,
+  .pagination .pagination-next {
+    background-color: #f3f4f6;
+    color: #333333;
+    width: auto;
+    height: auto;
+    line-height: 1.2;
+    padding: 3px 6px;
+  }
+  
+  .pagination {
     display: flex;
     list-style: none;
     padding: 0;
     justify-content: center;
   }
+  
   .pagination li {
     display: inline-block;
     margin: 0 7px;
@@ -72,51 +73,35 @@ body {
     text-align: center;
     cursor: pointer;
   }
+  
   .pagination .active {
     background-color: #000;
     color: #fff;
   }
-   header {
-     position: relative;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     height: 100%;
-     transform-style: preserve-3d;
-     z-index: -3;
-   }
-   
-   .background {
-     transform: translateZ(-10px) scale(2);
-   }
-   
-   .foreground {
-     transform: translateZ(-5px) scale(1.5);
-   }
-   
-   .background,
-   .foreground {
-     position: absolute;
-     height: 100%;
-     width: 100%;
-     object-fit: cover;
-     z-index: -1;
-     overflow: hidden;
-   }
-   
-   .title {
-     font-size: 7rem;
-     color: white;
-     
-     text-shadow: 0 0 5px black;;
-   }
-   
-   section {
-     font-size: 2rem;
-     padding: 2rem;
-     background-color: #333;
-     color: white;
-   }
+
+  .background {
+    transform: translateZ(-10px) scale(2);
+    /* Remove "overflow: hidden;" to allow full visibility of the background image */
+  }
+  
+  .foreground {
+    transform: translateZ(-5px) scale(1.5);
+    /* Remove "overflow: hidden;" to allow full visibility of the foreground image */
+  }
+  
+  .title {
+    font-size: 7rem;
+    color: white;
+    text-shadow: 0 0 5px black;
+  }
+  
+  section {
+    font-size: 2rem;
+    padding: 2rem;
+    background-color: #333;
+    color: white;
+  }
+  
    /*
  * View a PURE 100% Tailwind CSS version here:
  * https://play.tailwindcss.com/Vg6H4j8Fux
@@ -401,8 +386,8 @@ body {
 }
 
 .nav__ul--extra {
-  column-count: 2;
-  column-gap: 1.25em;
+  column-count: 1;
+ 
 }
 
 .legal {
@@ -432,7 +417,7 @@ body {
   }
   
   .nav__item--extra {
-    flex-grow: 2;
+    flex-grow: 1;
   }
   
   .footer__addr {

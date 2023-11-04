@@ -34,7 +34,7 @@ function extractFirstFrameFromGif(gifUrl) {
 
 function ExerciseCard({ exercise }) {
  
-
+ 
   const [hovered, setHovered] = useState(false);
   const [dataUrl, setDataUrl] = useState('');
 
@@ -61,7 +61,7 @@ function ExerciseCard({ exercise }) {
   return (
     <>
         <Link
-      className={`exercise-card w-1/4 bg-white rounded-2xl noscroll`}
+      className={`exercise-card xl:w-1/4 w-[90%] x-7 xl:mr-0  bg-white rounded-2xl noscroll`}
       to={`/exercise/${exercise.id}`}
       onMouseEnter={handleHover}
       onMouseLeave={handleLeave}
@@ -69,7 +69,7 @@ function ExerciseCard({ exercise }) {
     >
       {hovered ? (
         <img
-          className={`w-11/12 h-[400px] rounded-2xl`}
+          className={`xl:w-11/12 w-[100%] h-[400px]  rounded-2xl`}
           src={exercise.gifUrl}
           alt={exercise.name}
           loading="lazy"
@@ -79,7 +79,7 @@ function ExerciseCard({ exercise }) {
         <div style={{ position: 'relative', width: '100%', height: '400px' }}>
           {dataUrl ? (
             <img
-              className="w-11/12 h-[400px] rounded-2xl"
+              className="xl:w-[300px] w-[100%]   rounded-2xl"
               src={dataUrl}
               alt={exercise.name}
               loading="lazy"

@@ -43,13 +43,13 @@ export default function Search({bodyPart,setBodyPart}) {
   
     <div className=''>
         <div className=" relative h-96 bg-gradient-to-b from-[#5a5959] to-[#F3F4F6]   to-70%  flex flex-col justify-center   ">
-  <div className="relative px-12 w-full  sm:max-w-2xl sm:mx-auto pt-52 pb-14 ">
+  <div className="relative xl:px-12 px-3 w-full  sm:max-w-2xl sm:mx-auto pt-52 pb-14 ">
     <div className=' bg-[#6a6969] rounded-full' >
     <div className="overflow-hidden z-0 rounded-full relative p-3 ">
       <form  className="relative flex  z-50 bg-white rounded-full">
         <input value={searchValue}
          onChange={(e)=>setSearchvalue(e.target.value)}
-        type="text" placeholder="" className="rounded-full flex-1 px-6 py-4 text-gray-700 focus:outline-none"></input>
+        type="text" placeholder="" className="rounded-full flex-1 xl:px-6 py-4 text-gray-700 focus:outline-none"></input>
         <button onClick={handleSubmit} className="bg-[#333] text-white rounded-full font-semibold px-8 py-4 hover:bg-indigo-400 focus:bg-indigo-600 focus:outline-none">Search</button>
       </form>
   
