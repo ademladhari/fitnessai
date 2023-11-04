@@ -5,7 +5,7 @@ import { useState } from 'react';
 const OpenAICompletion = ({exercise,userData}) => {
   const [text,setText]=useState("")
   
-  useEffect(() => {
+  useEffect(() => { 
     const runCompletion = async () => {
       const prompt=(userData)=>{
  
@@ -37,10 +37,16 @@ const OpenAICompletion = ({exercise,userData}) => {
         }),
       });
 
-      const data = await response.json();
+     
 
-     setText( data.choices[0].text)
+      if (response.ok) {
+        const data = await response.json();
+        setText(data.choices[0].text);
+      } else {
+        setText("Error: Unable to fetch data.");
+      
     };
+  }
     runCompletion()
 
   }, [exercise, userData]);
