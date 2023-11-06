@@ -4,10 +4,12 @@ import BodyPartContext from '../../util/context';
 import ExerciseCard from './ExerciseCard';
 import { useEffect } from 'react';
 import { exerciseOptions, fetchData } from '../../util/fetchData';
+import { UserAuth } from '../../context/AuthContext';
 
 function Exercices() {
   const { exercises, bodyPart, setExercises } = useContext(BodyPartContext);
-  
+  const {  exercisesSectionRef } = UserAuth();
+
   // start of pagination part
   const exercisesPerPage = 9; // Number of exercises to display per page
   const [currentPage, setCurrentPage] = useState(1); // Note: Material-UI Pagination starts from 1
@@ -36,8 +38,8 @@ function Exercices() {
   }, [bodyPart, setExercises]);
 
   return (
-    <Box className="bg-[#F3F4F6]" id="exercises" pt="100px" align="center" >
-      <Typography variant="h2" align="center" paddingBottom="40px" paddingTop="110px">
+    <Box className="bg-[#F3F4F6]" id="exercises" pt="100px" align="center" > 
+      <Typography variant="h2" align="center" paddingBottom="40px" paddingTop="110px" ref={exercisesSectionRef}>
         Results
       </Typography>
       <Stack

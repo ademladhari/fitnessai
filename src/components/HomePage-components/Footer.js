@@ -1,10 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import { UserAuth } from '../../context/AuthContext';
 
 
 const Footer = () => {
+  const {  contactSectionRef } = UserAuth();
+
   return (
-    <footer class="footer">
+    <footer class="footer" ref={contactSectionRef}>
   <div class="footer__addr">
     <h1 class="footer__logo">Adem Ladhari</h1>
         

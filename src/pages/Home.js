@@ -5,12 +5,14 @@ import Search from "../components/HomePage-components/Search";
 import BodyPartContext from '../util/context';
 import Exercices from "../components/HomePage-components/Exercices";
 import Footer from "../components/HomePage-components/Footer";
+import { UserAuth } from "../context/AuthContext";
 
 
 
 function Home() {
   const [bodyPart, setBodyPart] = useState('all');
   const [exercises, setExercises] = useState([]);
+  const {  aboutSectionRef } = UserAuth();
 
 
 
@@ -26,7 +28,7 @@ function Home() {
     
   
   
-        <section className="bg-[#525252] bg-gradient-to-b from-50% from-[#060606] to-[#5a5959] ">
+        <section className="bg-[#525252] bg-gradient-to-b from-50% from-[#060606] to-[#5a5959] " ref={aboutSectionRef}>
           <About />
         </section>
         <BodyPartContext.Provider

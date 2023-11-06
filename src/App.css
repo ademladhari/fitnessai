@@ -7,7 +7,10 @@
     animation-play-state: paused;
   }
 }
-
+.hm::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
 body {
     margin: 0;
    

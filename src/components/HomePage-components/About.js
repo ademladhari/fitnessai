@@ -6,11 +6,11 @@ const AboutSection = () => {
 
   
   
-<div class="container xl:my-11 mx-auto md:px-6   ">
+<div class="container xl:my-11 mx-auto md:px-6   " >
 
   <section class="mb-10   bg-[#00000000]">
    
-    <div class="container mx-auto text-center lg:text-left xl:px-36 text-xl    ">
+    <div class="container mx-auto text-center lg:text-left xl:px-36 text-xl     "> 
       <div class=" grid items-center lg:grid-cols-2  ">
         <div class="mb-12 lg:mb-0 ">
           <div

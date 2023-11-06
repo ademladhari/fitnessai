@@ -5,6 +5,7 @@ import { FaArrowDown, FaArrowUp } from "react-icons/fa";
 
 function Navbar({ setShow, show }) {
   const { user, logOut } = UserAuth();
+  const {  exercisesSectionRef,aboutSectionRef,contactSectionRef } = UserAuth();
 
   const handleSignOut = async () => {
     try {
@@ -13,25 +14,28 @@ function Navbar({ setShow, show }) {
       console.log(error);
     }
   };
+ 
+
 
   return (
     <div className="flex flex-row justify-between bg-gradient-to-r   from-gray-300 to-gray-400  fixed  -top-0 h-[55px] xl:h-[55px] md:h-[40px] w-[100%]  z-10 dark:from-[#171717] dark:to-[#515050]">
       <div className="flex flex-row  items-center py-3">
         <Link
           to="/"
-          className="xl:text-lg font-semibold dark:text-gray-300 text-gray-800 mx-4 border-b-4 text-base border-red-500"
+          className="xl:text-lg font-semibold  text-gray-800 mx-4  text-base "
         >
           Home
         </Link>
-        <a href="exercises" className="xl:text-lg text-base dark:text-gray-300 font-semibold text-gray-800 xl:mx-4 mx-2">
-          Exercises
-        </a>
-        <a href="about" className="xl:text-lg text-base dark:text-gray-300 font-semibold text-gray-800 xl:mx-4 mx-2">
+       
+        <div   onClick={() => aboutSectionRef.current.scrollIntoView({ behavior: "smooth" })}className="xl:text-lg text-base dark:text-gray-300 font-semibold text-gray-800 xl:mx-4 mx-2">
           About
-        </a>
-        <a href="contact" className="xl:text-lg dark:text-gray-300 text-base font-semibold text-gray-800 xl:mx-4 mx-2">
+        </div>
+        <div   onClick={() => exercisesSectionRef.current.scrollIntoView({ behavior: "smooth" })} className="xl:text-lg text-base dark:text-gray-300 font-semibold text-gray-800 xl:mx-4 mx-2">
+          Exercises
+        </div>
+        <div   onClick={() => contactSectionRef.current.scrollIntoView({ behavior: "smooth" })}className="xl:text-lg dark:text-gray-300 text-base font-semibold text-gray-800 xl:mx-4 mx-2">
           Contact
-        </a>
+        </div>
         </div>
         <div className="">
         {user.email ? (

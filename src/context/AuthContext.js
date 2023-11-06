@@ -2,13 +2,16 @@ import { useContext, createContext, useEffect, useState } from "react";
 import { GoogleAuthProvider, signInWithPopup,  signOut, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, setPersistence, browserLocalPersistence } from "firebase/auth";
 import { auth, db } from '../firebase';
 import { setDoc, doc, getDoc, updateDoc } from 'firebase/firestore';
+import { useRef } from "react";
 
 const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState({});
   const [error, setError] = useState(null);
-
+  const exercisesSectionRef = useRef();
+  const aboutSectionRef = useRef();
+  const contactSectionRef = useRef();
   async function googleSignIn(userData) {
     const provider = new GoogleAuthProvider();
     try {
@@ -123,7 +126,7 @@ export const AuthContextProvider = ({ children }) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ googleSignIn, signup, login, logOut, user, error }}>
+    <AuthContext.Provider value={{ googleSignIn, signup, login, logOut, user, error,exercisesSectionRef,contactSectionRef,aboutSectionRef }}>
       {children}
     </AuthContext.Provider>
   );
