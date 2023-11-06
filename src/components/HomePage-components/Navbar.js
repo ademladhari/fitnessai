@@ -22,7 +22,7 @@ function Navbar({ setShow, show }) {
       <div className="flex flex-row  items-center py-3">
         <Link
           to="/"
-          className="xl:text-lg font-semibold  text-gray-800 mx-4  text-base "
+          className="xl:text-lg font-semibold  text-gray-800 mx-4 dark:text-gray-300  text-base "
         >
           Home
         </Link>
